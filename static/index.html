@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0b0c">
+  <meta name="description" content="RICKY_EX_EMOT_BOT — Free Fire emote control dashboard.">
+  <title>RICKY_EX_EMOT_BOT</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="grid-bg"></div><div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <header class="topbar">
+    <a class="brand" href="/"><span class="brand-icon">RX</span><span>RICKY <b>EX EMOT BOT</b><small>CONTROL PANEL</small></span></a>
+    <div class="top-right"><span class="live-dot"></span><span>API DASHBOARD</span><span class="version">v1.0</span></div>
+  </header>
+  <main class="wrap">
+    <section class="hero">
+      <div class="eyebrow"><span></span> FREE FIRE EMOTE CONTROL</div>
+      <h1>Make Your <em>Move.</em></h1>
+      <p>Send emotes with a clean, simple control panel.</p>
+    </section>
+    <section class="layout">
+      <div class="panel form-panel">
+        <div class="panel-head"><div><span class="overline">CONTROL CENTER</span><h2>Send Emote</h2></div><div class="head-mark">01</div></div>
+        <form id="emoteForm">
+          <label for="teamCode">TEAM CODE <span>REQUIRED</span></label>
+          <div class="field"><span class="field-icon">#</span><input id="teamCode" inputmode="numeric" autocomplete="off" placeholder="Enter team code" required></div>
+          <label for="targetUid">TARGET UID <small>OPTIONAL</small></label>
+          <div class="field"><span class="field-icon">◎</span><input id="targetUid" inputmode="numeric" autocomplete="off" placeholder="Enter player UID"></div>
+          <label for="emoteId">EMOTE ID <small>DEFAULT: 909000001</small></label>
+          <div class="field"><span class="field-icon">✦</span><input id="emoteId" inputmode="numeric" autocomplete="off" placeholder="909000001" value="909000001" required></div>
+          <button id="sendBtn" type="submit"><span class="btn-text">SEND EMOTE</span><span class="btn-arrow">↗</span></button>
+          <p class="hint">Use only accounts and game features you are authorized to use.</p>
+        </form>
+      </div>
+      <div class="panel response-panel">
+        <div class="panel-head"><div><span class="overline">SERVER FEEDBACK</span><h2>API Response</h2></div><div class="head-mark">02</div></div>
+        <div class="status-row"><span class="status-label">REQUEST STATUS</span><span id="status" class="status idle"><i></i> WAITING</span></div>
+        <div class="response-box" id="response"><div class="empty-icon">⌁</div><strong>Ready when you are</strong><p>Your API response will appear here after sending a request.</p></div>
+        <div class="response-foot"><span>CONNECTION</span><span><i class="live-dot"></i> SAME SERVER</span></div>
+      </div>
+    </section>
+    <footer><span>RICKY_EX_EMOT_BOT <b>◆</b> <span class="muted">CRAFTED BY RICKY_EX_EMOT_BOT</span></span><span class="muted">DARK / GOLD EDITION</span></footer>
+  </main>
+  <script src="/app.js"></script>
+</body>
+</html>
